@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Question 7</title>
+</head>
+<body>
+    <script>
+        function uniqueCharacter(text)
+        {
+            for (let i = 0; i < text.length; i++) {
+                for (let j = i + 1; j < text.length; j++) {
+                    if (text[i] == text[j]) {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }
+        let data = "Jelly Techno"
+        if (uniqueCharacter(data)) {
+            document.write(`Text ${data} termasuk uniq karakter`);
+        } else {
+            document.write(`Text ${data} termasuk duplikat karakter`);
+        }
+    </script>
+</body>
+</html>

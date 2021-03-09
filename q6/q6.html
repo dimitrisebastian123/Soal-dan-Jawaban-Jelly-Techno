@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Question 6</title>
+</head>
+<body>
+        <input type="number" min="1" name="angka" id="angka">
+        <button type="submit" onclick="add_data()">OK</button>
+    <script>
+        function Fibonacci(number)
+        {
+            if (number == 0){
+                return 0;
+            }else if (number == 1){
+                return 1;
+            }else{
+                return (Fibonacci(number - 1) +
+                    Fibonacci(number - 2));
+        }}
+        function add_data(){
+        let res = 0
+            let number = document.getElementById('angka').value;
+            for (let counter = 0; counter < number;counter++) {
+                res = Fibonacci(counter);
+            }
+            document.write("Output : ",res)
+        }
+    </script>
+</body>
+</html>
